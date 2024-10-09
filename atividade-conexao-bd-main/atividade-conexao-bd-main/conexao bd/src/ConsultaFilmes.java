@@ -23,7 +23,7 @@ public class ConsultaFilmes {
             resultSet.close();
             statement.close();
             connection.close();
-        } catch (SQLException erro) {
+        } catch (ClassNotFoundException erro) {
             JOptionPane.showMessageDialog(null, "Driver não encontrado!\n"
             + erro.toString());
         }catch (SQLException erro) {

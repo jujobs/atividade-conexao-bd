@@ -96,22 +96,22 @@ public class GuiCadastroFilmes extends JFrame{
                     return;
                 }
                 if (tfTitulo.getText().equals("")) {
-                    JOptionPane.showMessageDialog("O título não pode ser vazio!");
+                    JOptionPane.showMessageDialog(null, "O título não pode ser vazio!");
                     tfTitulo.requestFocus();
                     return;
                 }
                 if (tfGenero.getText().equals("")) {
-                    JOptionPane.showMessageDialog("O gênero não pode ser vazio!");
+                    JOptionPane.showMessageDialog(null, "O gênero não pode ser vazio!");
                     tfGenero.requestFocus();
                     return;
                 }
                 if (tfProdutora.getText().equals("")) {
-                    JOptionPane.showMessageDialog("A produtora não pode ser vazia!");
+                    JOptionPane.showMessageDialog(null, "A produtora não pode ser vazia!");
                     tfProdutora.requestFocus();
                     return;
                 }
                 if (tfDataCompra.getText().equals("")) {
-                    JOptionPane.showMessageDialog("A data de compra não pode ser vazia!");
+                    JOptionPane.showMessageDialog(null, "A data de compra não pode ser vazia!");
                     tfDataCompra.requestFocus();
                     return;
                 }
@@ -178,7 +178,7 @@ public class GuiCadastroFilmes extends JFrame{
     }
     public void setBotoes(boolean nNovo, boolean bLocalizar, boolean bGravar,
                           boolean bAlterar, boolean bExcluir, boolean bCancelar) {
-        btNovo.setEnabled(btNovo);
+        btNovo.setEnabled(bNovo);
         btLocalizar.setEnabled(bLocalizar);
         btGravar.setEnabled(bGravar);
         btAlterar.setEnabled(bAlterar);

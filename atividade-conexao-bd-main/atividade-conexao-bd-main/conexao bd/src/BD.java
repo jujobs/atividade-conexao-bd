@@ -18,7 +18,11 @@ public class BD {
             System.out.println(("Conectou"));
             return true;
         } catch (ClassNotFoundException erro) {
-            System.out.println("Driver não encontrado " + erro,toString());
+            System.out.println("Driver não encontrado " + erro.toString());
+            return false;
+        } catch (SQLException e) {
+
+            System.out.println("Driver não encontrado " + e.toString());
             return false;
         }
     }
@@ -27,6 +31,8 @@ public class BD {
             connection.close();
             System.out.println("Desconectou");
         } catch (SQLException erro) {
+
+        }
     }
 
 }
