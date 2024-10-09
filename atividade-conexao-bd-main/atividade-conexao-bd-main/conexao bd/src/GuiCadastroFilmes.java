@@ -139,7 +139,7 @@ public class GuiCadastroFilmes extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 filmes.filme.setCodigo(tfCodigo.getText());
                 filmes.localizar();
-                int n = JOptionPane.showMessageDialog(null, filmes.filme.getTitulo(),
+                int n = JOptionPane.showConfirmDialog(null, filmes.filme.getTitulo(),
                         " Excluir o Filme? ", JOptionPane.YES_NO_OPTION);
                 if (n == JOptionPane.YES_OPTION) {
                     JOptionPane.showMessageDialog(null, filmes.atualizar(FilmesDAO.EXCLUSAO));
@@ -176,7 +176,7 @@ public class GuiCadastroFilmes extends JFrame{
             limparCampos();
         }
     }
-    public void setBotoes(boolean nNovo, boolean bLocalizar, boolean bGravar,
+    public void setBotoes(boolean bNovo, boolean bLocalizar, boolean bGravar,
                           boolean bAlterar, boolean bExcluir, boolean bCancelar) {
         btNovo.setEnabled(bNovo);
         btLocalizar.setEnabled(bLocalizar);

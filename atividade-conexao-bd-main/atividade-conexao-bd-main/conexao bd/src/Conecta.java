@@ -9,6 +9,7 @@ public class Conecta {
             Class.forName(DRIVER);
             Connection connection = DriverManager.getConnection(URL, "root", "");
 
+
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, "Problemas na conexão com a fonte de dados\n"
             + erro.toString());
